@@ -45,3 +45,21 @@ footer {
   background: #222;
   color: white;
 }
+
+.pantalla {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  color: #f4f6f8;
+}
+.inicio {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
