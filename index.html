@@ -1,97 +1,358 @@
+```html
 <!DOCTYPE html>
+
+<!-- Idioma -->
 <html lang="es">
+
 <head>
+
+    <!-- Caracteres especiales -->
     <meta charset="UTF-8">
-    <title>Portafolio | Gustavo</title>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título -->
+    <title>Gustavo | Backend Developer</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
 
- 
-            
-                
-      <section class="pantalla">
-       
-        <h1>Gustavo</h1>
-        <p>Estudiante de Programación | SISE</p>
-        <p>4 Ciclo</p>
-      
-     </section>
-   
- 
-         
+
+    <!-- ========================= -->
+    <!-- NAVBAR -->
+    <!-- ========================= -->
+
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <h1 class="logo">Gustavo.dev</h1>
+
+        <!-- Links -->
+        <ul class="nav-links">
+
+            <li><a href="#inicio">Inicio</a></li>
+
+            <li><a href="#sobre">Sobre mí</a></li>
+
+            <li><a href="#stack">Stack</a></li>
+
+            <li><a href="#proyectos">Proyectos</a></li>
+
+            <li><a href="#contacto">Contacto</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+    <header id="inicio" class="hero">
+
+        <!-- Información principal -->
+        <div class="hero-info">
+
+            <p class="backend-text">
+                Backend Developer Jr
+            </p>
+
+            <h1>
+                Java • Spring Boot • REST APIs
+            </h1>
+
+            <p class="descripcion">
+
+                Desarrollo aplicaciones backend enfocadas en APIs REST,
+                arquitectura por capas y conexión a bases de datos.
+
+            </p>
+
+            <!-- Botones -->
+            <div class="hero-buttons">
+
+                <a href="#proyectos" class="btn">
+                    Ver proyectos
+                </a>
+
+                <a href="https://github.com/Gustavobest" class="btn-secondary">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Imagen -->
+        <div class="hero-image">
+
+            <img src="img/fotoportada.jpg" alt="Backend Developer">
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================= -->
+    <!-- MAIN -->
+    <!-- ========================= -->
+
     <main>
-            <section class="contenedor-presentacion">
-            
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNmwj1aeTQjbBTw-MqZvnBuX50CqF8sn79lw&s"  class="fprogramando">
-                 <section id="inicio" class="Presentacion">
-            <h2>Presentación</h2>
-            <p>
-             Hola, soy Gustavo Diego, estudiante del cuarto ciclo en el Instituto SISE.
-             Actualmente desarrollo proyectos académicos y personales para fortalecer mis habilidades en programación.
-             Mi proyección es trabajar en una empresa grande y participar en el desarrollo de aplicaciones de alto impacto.
-             Me considero una persona curiosa, constante y responsable, a la que le gustan los retos y el aprendizaje continuo
-            </p>
-            </section>
-               </section>
 
-        <section id="sobre-mi" class="sobremi">
+
+        <!-- ========================= -->
+        <!-- SOBRE MÍ -->
+        <!-- ========================= -->
+
+        <section id="sobre" class="card">
+
             <h2>Sobre mí</h2>
+
             <p>
-                Soy peruano, nací en la ciudad de Pachacútec, Ventanilla.
-                Actualmente me encuentro cursando la mitad de mi carrera profesional.
-                Mis metas son seguir especializándome en programación y mejorar cada día a nivel personal y profesional.
+
+                Soy estudiante de Desarrollo de Software y actualmente
+                me especializo en backend con Java y Spring Boot.
+
             </p>
-        </section> 
 
-        <section id="tecnologias" class="tecnologias">
-            <h2>Tecnologías</h2>
-            <ul>
-                <div>
-                <li>C#</li>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT6mDvl9odi-fcxjY7S1HItDwaizVfRbatVQ&s" alt="">
-                 </div>
-                  <div>
-                <li>Java</li>
-                <img src="https://okhosting.com/wp-content/uploads/2019/01/java.jpg" >
-               </div>
-                <div>
-                <li>HTML</li>
-                 <img src="https://www.adaweb.es/wp-content/uploads/2019/09/html5-logo-adaweb.png">
-                </div>   
-                 <div>          
-                 <li>CSS</li>
-                 <img src="https://www.tutorialspoint.com/css/images/css.png">
+            <p>
 
-                 </div>
-                  <div>
-                <li>SQL Server</li>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzM9FF3heKwLVmFAuibMN3Nhxmo2CZ3RtZOg&s">
+                Me interesa construir APIs REST, trabajar con bases de datos
+                y desarrollar proyectos reales para seguir creciendo profesionalmente.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- STACK -->
+        <!-- ========================= -->
+
+        <section id="stack" class="card">
+
+            <h2>Stack Tecnológico</h2>
+
+            <!-- Grid -->
+            <div class="stack-grid">
+
+
+                <!-- Java -->
+                <div class="tech-card">
+
+                    <i class="fa-brands fa-java"></i>
+
+                    <h3>Java</h3>
+
+                    <p>Backend y lógica de negocio.</p>
+
                 </div>
-            </ul>
+
+
+
+                <!-- Spring -->
+                <div class="tech-card">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <h3>Spring Boot</h3>
+
+                    <p>Desarrollo de APIs REST.</p>
+
+                </div>
+
+
+
+                <!-- SQL -->
+                <div class="tech-card">
+
+                    <i class="fa-solid fa-database"></i>
+
+                    <h3>SQL Server</h3>
+
+                    <p>Gestión de bases de datos.</p>
+
+                </div>
+
+
+
+                <!-- GitHub -->
+                <div class="tech-card">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    <h3>GitHub</h3>
+
+                    <p>Control de versiones.</p>
+
+                </div>
+
+
+
+                <!-- HTML/CSS -->
+                <div class="tech-card">
+
+                    <i class="fa-brands fa-html5"></i>
+
+                    <h3>HTML/CSS</h3>
+
+                    <p>Interfaces web modernas.</p>
+
+                </div>
+
+
+
+                <!-- JavaScript -->
+                <div class="tech-card">
+
+                    <i class="fa-brands fa-js"></i>
+
+                    <h3>JavaScript</h3>
+
+                    <p>Interactividad frontend.</p>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="proyectos" class="proyectos">
+
+
+        <!-- ========================= -->
+        <!-- PROYECTOS -->
+        <!-- ========================= -->
+
+        <section id="proyectos" class="card">
+
             <h2>Proyectos</h2>
-            <p>proyecto de java aplicativa almacen</p>
-            <p>proyecto de c# aplicativo web gestion docentes</p>
-            <p>crud aplicativa web</p>
-            <a href=""></a>
+
+            <div class="projects-grid">
+
+
+                <!-- Proyecto -->
+                <div class="project-card">
+
+                    <h3>Sistema de Gestión de Reservas Hoteleras</h3>
+
+                    <p>
+
+                        API REST desarrollada con Java, Spring Boot y SQL Server. Permite gestionar habitaciones, 
+                        reservas y usuarios mediante arquitectura por capas y operaciones CRUD.
+
+                    </p>
+
+                    <button>
+                        Ver GitHub
+                    </button>
+
+                </div>
+
+
+
+                <!-- Proyecto -->
+                <div class="project-card">
+
+                    <h3>API de Autenticación y Gestión de Usuarios</h3>
+
+                    <p>
+
+                        Sistema backend con autenticación JWT y control de roles. Incluye registro de usuarios,
+                         login seguro y protección de endpoints utilizando Spring Security.
+
+                    </p>
+                
+                    <button>
+                      <a href="https://github.com/Gustavobest/Grupo5-DSE">  Ver GitHub</a>
+                    </button>
+
+                </div>
+
+
+
+                <!-- Proyecto -->
+                <div class="project-card">
+
+                    <h3>Asistente IA para Gestión de Tareas</h3>
+
+                    <p>
+
+                        Aplicación backend integrada con IA para organizar tareas y automatizar recomendaciones.
+                         Desarrollada con Java, Spring Boot y APIs externas.
+
+                    </p>
+
+                    <button>
+                        Ver GitHub
+                    </button>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="contacto" class="contacto">
+
+
+        <!-- ========================= -->
+        <!-- CONTACTO -->
+        <!-- ========================= -->
+
+        <section id="contacto" class="card">
+            
             <h2>Contacto</h2>
-            <p>Email: gustavodiego@gmail.com</p>
+
+            <!-- Formulario -->
+            <form class="contact-form">
+
+                <input
+                    type="text"
+                    placeholder="Tu nombre"
+                    required>
+
+                <input
+                    type="email"
+                    placeholder="Tu correo"
+                    required>
+
+                <textarea
+                    rows="5"
+                    placeholder="Escribe tu mensaje..."
+                    required></textarea>
+
+                <button type="submit">
+
+                    Enviar mensaje
+
+                </button>
+
+                <!-- Mensaje oculto -->
+                <p id="status" class="status-message"></p>
+
+            </form>
+
         </section>
 
     </main>
 
-    <footer>
-        <p>© 2026 Gustavo</p>
-    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
