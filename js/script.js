@@ -1,51 +1,26 @@
-/* ========================= */
-/* SELECCIONAR ELEMENTOS */
-/* ========================= */
-
-const form = document.querySelector(".contact-form");
-
-/* Seleccionamos usando la clase de CSS de forma única */
-const statusMessage = document.querySelector(".status-message");
-
-
-/* ========================= */
-/* EVENTO SUBMIT */
-/* ========================= */
-
-form.addEventListener("submit", function(e){
-
-    /* Evita recargar página */
+form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    /* Mostrar mensaje */
-    statusMessage.textContent = "Mensaje enviado correctamente 🚀";
+    const formData = new FormData(form);
 
-    /* Mostrar mensaje oculto */
-    statusMessage.style.display = "block";
+    const response = await fetch("https://formspree.io/f/mkoljvbl", {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
 
-    /* Limpiar formulario */
-    form.reset();
-
-    /* Ocultar mensaje después de 3 segundos */
-    setTimeout(function(){
-        statusMessage.style.display = "none";
-    }, 3000);
-
-});
-
-
-/* ========================= */
-/* EFECTO NAVBAR */
-/* ========================= */
-
-window.addEventListener("scroll", function(){
-
-    const navbar = document.querySelector(".navbar");
-
-    if(window.scrollY > 50){
-        navbar.style.background = "#020617";
+    if (response.ok) {
+        statusMessage.textContent = "Mensaje enviado correctamente 🚀";
+        statusMessage.style.display = "block";
+        form.reset();
     } else {
-        navbar.style.background = "#111827";
+        statusMessage.textContent = "Error al enviar el mensaje ❌";
+        statusMessage.style.display = "block";
     }
 
+    setTimeout(() => {
+        statusMessage.style.display = "none";
+    }, 3000);
 });

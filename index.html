@@ -312,41 +312,42 @@
         <!-- CONTACTO -->
         <!-- ========================= -->
 
-        <section id="contacto" class="card">
-            
-            <h2>Contacto</h2>
+       <section id="contacto" class="card">
+    
+    <h2>Contacto</h2>
 
-            <!-- Formulario -->
-            <form class="contact-form">
+    <!-- REEMPLAZA EL ENLACE DE ABAJO POR EL TUYO DE FORMSPREE -->
+    <form class="contact-form" action="https://formspree.io/f/xrewpadn" method="POST">
 
-                <input
-                    type="text"
-                    placeholder="Tu nombre"
-                    required>
+        <!-- Es obligatorio incluir el atributo name="..." en cada campo -->
+        <input
+            type="text"
+            name="nombre"
+            placeholder="Tu nombre"
+            required>
 
-                <input
-                    type="email"
-                    placeholder="Tu correo"
-                    required>
+        <input
+            type="email"
+            name="email"
+            placeholder="Tu correo"
+            required>
 
-                <textarea
-                    rows="5"
-                    placeholder="Escribe tu mensaje..."
-                    required></textarea>
+        <textarea
+            name="mensaje"
+            rows="5"
+            placeholder="Escribe tu mensaje..."
+            required></textarea>
 
-                <button type="submit">
+        <button type="submit">
+            Enviar mensaje
+        </button>
 
-                    Enviar mensaje
+        <!-- Mensaje oculto -->
+        <p id="status" class="status-message"></p>
 
-                </button>
+    </form>
 
-                <!-- Mensaje oculto -->
-                <p id="status" class="status-message"></p>
-
-            </form>
-
-        </section>
-
+</section>
     </main>
 
 
