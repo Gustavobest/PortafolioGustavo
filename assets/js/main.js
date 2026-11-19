@@ -24,22 +24,28 @@ function initMobileMenu() {
   });
 }
 
-/** Marca en el menú la sección que se está viendo. */
+/** Marca en el menú la sección que se está viendo (ninguna mientras estás en el inicio). */
 function initActiveSection() {
   const links = [...document.querySelectorAll('.nav__links a[href^="#"]')];
   const sections = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
-  if (!("IntersectionObserver" in window) || !sections.length) return;
+  if (!sections.length) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      links.forEach((a) => a.removeAttribute("aria-current"));
-      const active = links.find((a) => a.getAttribute("href") === `#${entry.target.id}`);
-      if (active) active.setAttribute("aria-current", "true");
+  const update = () => {
+    const line = window.innerHeight * 0.45; // punto de referencia: un poco antes de la mitad de la pantalla
+    let current = null;
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= line) current = section;
     });
-  }, { rootMargin: "-45% 0px -50% 0px" });
+    links.forEach((a) => {
+      const isActive = current && a.getAttribute("href") === `#${current.id}`;
+      if (isActive) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    });
+  };
 
-  sections.forEach((s) => observer.observe(s));
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
 }
 
 /** Aparición suave de los bloques al hacer scroll. */

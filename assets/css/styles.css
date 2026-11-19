@@ -355,11 +355,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .js .reveal.is-visible { opacity: 1; transform: none; }
 
-/* Respeta a quien prefiere menos movimiento */
+/* Menos movimiento: se mantienen las animaciones suaves (cursor, punto, fundidos)
+   y se apagan solo las de desplazamiento grande. */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js .reveal { opacity: 1; transform: none; }
+  .marquee__track { animation: none; }
+  .js .reveal { transform: none; transition: opacity .6s ease; }
+  .btn:hover, .card:hover { transform: none; }
 }
 
 /* Página 404 */
