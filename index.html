@@ -1,364 +1,417 @@
-```html
 <!DOCTYPE html>
-
-<!-- Idioma -->
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Caracteres especiales -->
-    <meta charset="UTF-8">
+  <!-- SEO -->
+  <title>Gustavo Quiroz | Backend Developer Java &amp; Spring Boot</title>
+  <meta name="description" content="Portafolio de Gustavo Quiroz, desarrollador backend en formación (Java, Spring Boot, SQL). Proyectos, habilidades y contacto. Buscando prácticas profesionales.">
+  <meta name="author" content="Gustavo Diego Quiroz">
+  <meta name="theme-color" content="#111214">
+  <link rel="canonical" href="https://TU-DOMINIO/">
 
-    <!-- Responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Open Graph (vista previa al compartir en LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:title" content="Gustavo Quiroz | Backend Developer">
+  <meta property="og:description" content="Desarrollador backend en formación: Java, Spring Boot, SQL. Buscando prácticas profesionales.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Título -->
-    <title>Gustavo | Backend Developer</title>
+  <!-- Seguridad básica (los encabezados completos están en netlify.toml) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action https://formspree.io; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
 
-    <!-- Iconos -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
 
+  <!-- Datos estructurados para buscadores -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gustavo Diego Quiroz",
+    "jobTitle": "Backend Developer (en formación)",
+    "alumniOf": "Instituto SISE",
+    "sameAs": ["https://github.com/Gustavobest", "https://www.linkedin.com/in/gustavodiegoq"]
+  }
+  </script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+  <!-- ===================== NAVEGACIÓN ===================== -->
+  <header class="site-header" id="inicio">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Gustavo Quiroz, ir al inicio">
+        <span class="brand__mark" aria-hidden="true">&lt;/&gt;</span>Gustavo Quiroz
+      </a>
 
-    <!-- ========================= -->
-    <!-- NAVBAR -->
-    <!-- ========================= -->
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
 
-    <nav class="navbar">
-
-        <!-- Logo -->
-        <h1 class="logo">Gustavo.dev</h1>
-
-        <!-- Links -->
-        <ul class="nav-links">
-
-            <li><a href="#inicio">Inicio</a></li>
-
-            <li><a href="#sobre">Sobre mí</a></li>
-
-            <li><a href="#stack">Stack</a></li>
-
-            <li><a href="#proyectos">Proyectos</a></li>
-
-            <li><a href="#contacto">Contacto</a></li>
-
+      <nav id="menu" class="nav__menu" aria-label="Principal">
+        <ul class="nav__links">
+          <li><a href="#sobre">Sobre mí</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#trayectoria">Trayectoria</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
+        <a class="btn btn--outline btn--sm" href="assets/docs/CV-Gustavo-Quiroz.pdf" download data-cv>
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          Descargar CV
+        </a>
+      </nav>
+    </div>
+  </header>
 
-    </nav>
+  <main id="contenido">
 
-
-
-    <!-- ========================= -->
-    <!-- HERO -->
-    <!-- ========================= -->
-
-    <header id="inicio" class="hero">
-
-        <!-- Información principal -->
-        <div class="hero-info">
-
-            <p class="backend-text">
-                Backend Developer Jr
-            </p>
-
-            <h1>
-                Java • Spring Boot • REST APIs
-            </h1>
-
-            <p class="descripcion">
-
-                Desarrollo aplicaciones backend enfocadas en APIs REST,
-                arquitectura por capas y conexión a bases de datos.
-
-            </p>
-
-            <!-- Botones -->
-            <div class="hero-buttons">
-
-                <a href="#proyectos" class="btn">
-                    Ver proyectos
-                </a>
-
-                <a href="https://github.com/Gustavobest" class="btn-secondary">
-                    GitHub
-                </a>
-
-            </div>
-
+    <!-- ===================== INICIO ===================== -->
+    <section class="hero grid-bg" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <div class="hero__meta">
+            <span class="pill"><span class="dot dot--live" aria-hidden="true"></span>Buscando prácticas profesionales</span>
+            <span class="mono muted">Lima, Perú</span>
+          </div>
+          <p class="mono accent">Hola, soy Gustavo Quiroz</p>
+          <h1 id="hero-title" class="hero__title">
+            Desarrollador de software <span class="accent">backend</span> en formación<span class="cursor accent" aria-hidden="true">_</span>
+          </h1>
+          <p class="lead">
+            Construyo APIs REST con Java y Spring Boot, con seguridad JWT, arquitectura por capas y pruebas automatizadas.
+            Complemento con frontend y análisis de datos con SQL y Power BI.
+          </p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#proyectos">
+              Ver proyectos
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--outline" href="#contacto">Contactarme</a>
+          </div>
+          <div class="socials">
+            <a class="icon-btn" href="https://github.com/Gustavobest" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Gustavo">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/gustavodiegoq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Gustavo">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
+            </a>
+          </div>
         </div>
 
+        <!-- Tarjeta decorativa: simula la respuesta de una API -->
+        <figure class="api-card" aria-label="Perfil de Gustavo presentado como respuesta JSON de una API">
+          <div class="api-card__bar">
+            <span class="method">GET</span>
+            <span class="api-card__path">/api/v1/developers/gustavo</span>
+            <span class="api-card__status"><span class="dot dot--live" aria-hidden="true"></span>200 OK</span>
+          </div>
+<pre class="api-card__body"><code>{
+  <span class="k">"nombre"</span>: <span class="s">"Gustavo Quiroz"</span>,
+  <span class="k">"rol"</span>: <span class="s">"Backend Developer"</span>,
+  <span class="k">"formacion"</span>: <span class="s">"SISE · Desarrollo de Software"</span>,
+  <span class="k">"stack"</span>: [<span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"MySQL"</span>],
+  <span class="k">"tambien"</span>: [<span class="s">"React"</span>, <span class="s">"Power BI"</span>],
+  <span class="k">"disponible"</span>: <span class="b">true</span>
+}<span class="cursor accent" aria-hidden="true">▍</span></code></pre>
+        </figure>
+      </div>
+    </section>
 
-        <!-- Imagen -->
-        <div class="hero-image">
+    <!-- Cinta de tecnologías (decorativa) -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>MySQL</span><span>JUnit 5</span><span>Docker</span><span>React</span><span>Power BI</span><span>Git</span><span>GitHub Copilot</span>
+        <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>MySQL</span><span>JUnit 5</span><span>Docker</span><span>React</span><span>Power BI</span><span>Git</span><span>GitHub Copilot</span>
+      </div>
+    </div>
 
-            <img src="img/fotoportada.jpg" alt="Backend Developer">
-
+    <!-- ===================== 01 SOBRE MÍ ===================== -->
+    <section id="sobre" class="section">
+      <div class="container about">
+        <div class="about__side reveal">
+          <p class="eyebrow">01 · Sobre mí</p>
+          <picture>
+            <source srcset="assets/img/gustavo.webp" type="image/webp">
+            <img class="about__photo" src="assets/img/gustavo.jpg" alt="Retrato ilustrado de Gustavo Quiroz" width="640" height="800" loading="lazy" decoding="async">
+          </picture>
         </div>
-
-    </header>
-
-
-
-    <!-- ========================= -->
-    <!-- MAIN -->
-    <!-- ========================= -->
-
-    <main>
-
-
-        <!-- ========================= -->
-        <!-- SOBRE MÍ -->
-        <!-- ========================= -->
-
-        <section id="sobre" class="card">
-
-            <h2>Sobre mí</h2>
-
-            <p>
-
-                Soy estudiante de Desarrollo de Software y actualmente
-                me especializo en backend con Java y Spring Boot.
-
-            </p>
-
-            <p>
-
-                Me interesa construir APIs REST, trabajar con bases de datos
-                y desarrollar proyectos reales para seguir creciendo profesionalmente.
-
-            </p>
-
-        </section>
-
-
-
-        <!-- ========================= -->
-        <!-- STACK -->
-        <!-- ========================= -->
-
-        <section id="stack" class="card">
-
-            <h2>Stack Tecnológico</h2>
-
-            <!-- Grid -->
-            <div class="stack-grid">
-
-
-                <!-- Java -->
-                <div class="tech-card">
-
-                    <i class="fa-brands fa-java"></i>
-
-                    <h3>Java</h3>
-
-                    <p>Backend y lógica de negocio.</p>
-
-                </div>
-
-
-
-                <!-- Spring -->
-                <div class="tech-card">
-
-                    <i class="fa-solid fa-leaf"></i>
-
-                    <h3>Spring Boot</h3>
-
-                    <p>Desarrollo de APIs REST.</p>
-
-                </div>
-
-
-
-                <!-- SQL -->
-                <div class="tech-card">
-
-                    <i class="fa-solid fa-database"></i>
-
-                    <h3>SQL Server</h3>
-
-                    <p>Gestión de bases de datos.</p>
-
-                </div>
-
-
-
-                <!-- GitHub -->
-                <div class="tech-card">
-
-                    <i class="fa-brands fa-github"></i>
-
-                    <h3>GitHub</h3>
-
-                    <p>Control de versiones.</p>
-
-                </div>
-
-
-
-                <!-- HTML/CSS -->
-                <div class="tech-card">
-
-                    <i class="fa-brands fa-html5"></i>
-
-                    <h3>HTML/CSS</h3>
-
-                    <p>Interfaces web modernas.</p>
-
-                </div>
-
-
-
-                <!-- JavaScript -->
-                <div class="tech-card">
-
-                    <i class="fa-brands fa-js"></i>
-
-                    <h3>JavaScript</h3>
-
-                    <p>Interactividad frontend.</p>
-
-                </div>
-
+        <div class="about__body reveal">
+          <h2 class="h2">Estudio Desarrollo de Software y construyo mi camino hacia la ingeniería y el emprendimiento.</h2>
+          <p class="body-text">
+            Soy estudiante de Desarrollo de Software en el Instituto SISE. Me especializo en backend con Java y Spring Boot:
+            APIs REST, seguridad, bases de datos y pruebas. Complemento con frontend y análisis de datos.
+          </p>
+          <p class="body-text">
+            Mi objetivo es convertirme en ingeniero de software y, más adelante, fundar una empresa tecnológica que desarrolle
+            soluciones innovadoras y lidere equipos.
+          </p>
+          <ul class="values">
+            <li class="card"><strong>Pensamiento backend</strong><span>Me interesa cómo se diseñan y escalan los sistemas por dentro.</span></li>
+            <li class="card"><strong>Datos para decidir</strong><span>Uso SQL y Power BI para entender la información y comunicarla.</span></li>
+            <li class="card"><strong>Innovación e IA</strong><span>Exploro cómo la inteligencia artificial puede resolver problemas reales.</span></li>
+            <li class="card"><strong>Visión emprendedora</strong><span>Quiero liderar equipos y construir mi propia empresa tecnológica.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 02 HABILIDADES ===================== -->
+    <section id="habilidades" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="eyebrow">02 · Habilidades técnicas</p>
+            <h2 class="h2">Con qué trabajo</h2>
+          </div>
+          <p class="section-num" aria-hidden="true">02</p>
+        </header>
+
+        <div class="skills">
+          <article class="card skill reveal">
+            <h3 class="skill__cat">Backend</h3>
+            <ul class="chips">
+              <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>JWT</li><li>Spring Data JPA</li><li>Maven</li>
+              <li>C# <span class="tag-learning">en aprendizaje</span></li>
+            </ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__cat">Bases de datos</h3>
+            <ul class="chips"><li>SQL</li><li>MySQL</li><li>Hibernate</li></ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__cat">Calidad y despliegue</h3>
+            <ul class="chips"><li>JUnit 5</li><li>Mockito</li><li>JaCoCo</li><li>Swagger / OpenAPI</li><li>Docker</li></ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__cat">Frontend</h3>
+            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li></ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__cat">Análisis de datos</h3>
+            <ul class="chips"><li>SQL</li><li>Power BI</li></ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__cat">Herramientas</h3>
+            <ul class="chips"><li>Git</li><li>GitHub</li><li>Linux</li></ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__cat">IA para desarrollar</h3>
+            <ul class="chips"><li>GitHub Copilot</li><li>Claude</li></ul>
+            <p class="skill__note">Las uso para acelerar; reviso, pruebo y entiendo todo el código que entra al proyecto.</p>
+          </article>
+        </div>
+        <p class="note reveal">Áreas de interés: inteligencia artificial, arquitectura backend y emprendimiento tecnológico.</p>
+      </div>
+    </section>
+
+    <!-- ===================== 03 CÓMO TRABAJO ===================== -->
+    <section id="proceso" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="eyebrow">03 · Cómo trabajo</p>
+            <h2 class="h2">De la idea al dato</h2>
+          </div>
+          <p class="section-num" aria-hidden="true">03</p>
+        </header>
+        <ol class="steps reveal">
+          <li class="step"><span class="step__n">01</span><h3>Entender</h3><p>Defino qué problema debe resolver el sistema y para quién.</p><span class="step__tool">Requisitos</span></li>
+          <li class="step"><span class="step__n">02</span><h3>Diseñar</h3><p>Modelo la base de datos, las capas y los endpoints antes de programar.</p><span class="step__tool">SQL · MySQL</span></li>
+          <li class="step"><span class="step__n">03</span><h3>Construir y probar</h3><p>Desarrollo la API apoyándome en IA para avanzar más rápido, y valido cada parte con pruebas.</p><span class="step__tool">Spring Boot · JUnit · Copilot</span></li>
+          <li class="step"><span class="step__n">04</span><h3>Medir</h3><p>Analizo los datos para mejorar con evidencia.</p><span class="step__tool">Power BI</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== 04 PROYECTOS ===================== -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="eyebrow">04 · Proyectos</p>
+            <h2 class="h2">Lo que he construido</h2>
+          </div>
+          <p class="section-num" aria-hidden="true">04</p>
+        </header>
+
+        <!-- Proyecto destacado -->
+        <article class="project project--featured glow reveal">
+          <div class="project__media">
+            <!-- Vista real de los endpoints del repositorio -->
+            <div class="endpoints" aria-label="Endpoints principales de la API">
+              <p class="endpoints__title mono">Hotel Management API · endpoints</p>
+              <ul>
+                <li><span class="method method--post">POST</span>/api/auth/login</li>
+                <li><span class="method">GET</span>/api/rooms/page</li>
+                <li><span class="method">GET</span>/api/rooms/search</li>
+                <li><span class="method method--post">POST</span>/api/reservations</li>
+                <li><span class="method">GET</span>/api/reservations/search</li>
+                <li><span class="method method--put">PUT</span>/api/users/{id}</li>
+                <li><span class="method method--del">DELETE</span>/api/rooms/{id}</li>
+              </ul>
+              <p class="endpoints__foot mono">Roles: ADMIN · USER</p>
             </div>
-
-        </section>
-
-
-
-        <!-- ========================= -->
-        <!-- PROYECTOS -->
-        <!-- ========================= -->
-
-        <section id="proyectos" class="card">
-
-            <h2>Proyectos</h2>
-
-            <div class="projects-grid">
-
-
-                <!-- Proyecto -->
-                <div class="project-card">
-
-                    <h3>Sistema de Gestión de Reservas Hoteleras</h3>
-
-                    <p>
-
-                        API REST desarrollada con Java, Spring Boot y SQL Server. Permite gestionar habitaciones, 
-                        reservas y usuarios mediante arquitectura por capas y operaciones CRUD.
-
-                    </p>
-
-                     <a href="https://github.com/Gustavobest/springboot-hotel-management-system" style="text-decoration: none;">
-                        <button style="cursor: pointer;">Ver GitHub</button>
-                       </a>
-
-                </div>
-
-
-
-                <!-- Proyecto -->
-                <div class="project-card">
-
-                    <h3>API de Autenticación y Gestión de Usuarios</h3>
-
-                    <p>
-
-                        Sistema backend con autenticación JWT y control de roles. Incluye registro de usuarios,
-                         login seguro y protección de endpoints utilizando Spring Security.
-
-                    </p>
-                
-                
-                       <a href="https://github.com/Gustavobest/auth-api-jwt" style="text-decoration: none;">
-                        <button style="cursor: pointer;">Ver GitHub</button>
-                       </a>
-
-                </div>
-
-
-
-                <!-- Proyecto -->
-                <div class="project-card">
-
-                    <h3>Asistente IA para Gestión de Tareas</h3>
-
-                    <p>
-
-                        Aplicación backend integrada con IA para organizar tareas y automatizar recomendaciones.
-                         Desarrollada con Java, Spring Boot y APIs externas.
-
-                    </p>
-
-                    
-        
-                       <a href="https://github.com/Gustavobest/ai-task-assistant" style="text-decoration: none;">
-                        <button style="cursor: pointer;">Ver GitHub</button>
-
-                       </a>
-                  
-
-                </div>
-
+          </div>
+          <div class="project__body">
+            <div class="badges">
+              <span class="badge badge--accent">Proyecto personal</span>
+              <span class="badge badge--ok">Funcional</span>
             </div>
+            <h3 class="project__title">Hotel Management API</h3>
+            <p class="body-text">API REST para gestionar usuarios, habitaciones y reservas de un hotel, con autenticación JWT y control por roles.</p>
+            <dl class="facts">
+              <div><dt>Problema</dt><dd>Gestionar habitaciones y reservas sin cruces de fechas ni accesos indebidos.</dd></div>
+              <div><dt>Solución</dt><dd>API por capas con Spring Security, validación de solapamiento de fechas y búsqueda dinámica.</dd></div>
+            </dl>
+            <div>
+              <p class="label">Funcionalidades</p>
+              <ul class="list">
+                <li>CRUD de usuarios, habitaciones y reservas con paginación</li>
+                <li>Login con JWT y roles ADMIN / USER</li>
+                <li>Pruebas unitarias, de controlador e integración (JUnit 5, Mockito)</li>
+                <li>Documentación con Swagger y despliegue con Docker</li>
+              </ul>
+            </div>
+            <ul class="chips chips--sm" aria-label="Tecnologías">
+              <li>Java 17</li><li>Spring Boot 3</li><li>Spring Security</li><li>JWT</li><li>JPA</li><li>MySQL</li><li>Docker</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn--primary btn--sm" href="https://github.com/Gustavobest/springboot-hotel-management-system" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
+            </div>
+          </div>
+        </article>
 
-        </section>
+        <!-- Proyecto académico -->
+        <article class="project reveal">
+          <div class="project__body">
+            <div class="badges">
+              <span class="badge badge--accent">Proyecto académico</span>
+              <span class="badge badge--warn">En desarrollo</span>
+              <span class="badge">Equipo de 5</span>
+            </div>
+            <h3 class="project__title">Live Translate AI</h3>
+            <p class="body-text">Extensión orientada a la traducción en tiempo real, con soporte para inglés, español y ruso. Desarrollada en un equipo de cinco integrantes.</p>
+            <ul class="list">
+              <li>Traducción en tiempo real</li>
+              <li>Inglés, español y ruso</li>
+            </ul>
+          </div>
+        </article>
 
+        <!-- Próximos proyectos: solo se muestran como planificados -->
+        <div class="planned reveal">
+          <p class="label">En planificación</p>
+          <ul>
+            <li>
+              <a href="https://github.com/Gustavobest/auth-api-jwt" target="_blank" rel="noopener noreferrer">auth-api-jwt</a>
+              <span>API de autenticación y gestión de usuarios con Spring Security y JWT.</span>
+            </li>
+            <li>
+              <a href="https://github.com/Gustavobest/ai-task-assistant" target="_blank" rel="noopener noreferrer">ai-task-assistant</a>
+              <span>Gestor de tareas con IA usando Spring Boot, MySQL y la API de OpenAI.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===================== 05 TRAYECTORIA ===================== -->
+    <section id="trayectoria" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="eyebrow">05 · Trayectoria</p>
+            <h2 class="h2">Formación, experiencia y logros</h2>
+          </div>
+          <p class="section-num" aria-hidden="true">05</p>
+        </header>
+        <ol class="timeline">
+          <li class="card reveal">
+            <p class="timeline__meta"><span class="badge badge--accent">Formación</span><span class="mono muted">En curso</span></p>
+            <h3>Desarrollo de Software · Instituto SISE</h3>
+            <p class="body-text">Carrera técnica en curso.</p>
+          </li>
+          <li class="card reveal">
+            <p class="timeline__meta"><span class="badge badge--accent">Proyecto en equipo</span></p>
+            <h3>Live Translate AI</h3>
+            <p class="body-text">Extensión de traducción en tiempo real desarrollada con un equipo de cinco integrantes.</p>
+          </li>
+          <li class="card reveal">
+            <p class="timeline__meta"><span class="badge badge--accent">Proyecto personal</span></p>
+            <h3>Hotel Management API</h3>
+            <p class="body-text">API REST con Spring Boot, seguridad JWT, pruebas automatizadas y Docker.</p>
+          </li>
+        </ol>
+        <p class="note reveal">Las certificaciones, hackatones y prácticas se irán sumando a esta línea de tiempo.</p>
+      </div>
+    </section>
 
-        <!-- ========================= -->
-        <!-- CONTACTO -->
-        <!-- ========================= -->
+    <!-- ===================== 06 CONTACTO ===================== -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="contact__info">
+            <p class="eyebrow">06 · Contacto</p>
+            <h2 class="h2 h2--xl">Construyamos algo juntos.</h2>
+            <p class="body-text">Busco prácticas profesionales, proyectos y equipos con quienes crecer. Escríbeme.</p>
+            <ul class="contact__links">
+              <li><a href="mailto:gustavodiego550@gmail.com">gustavodiego550@gmail.com</a></li>
+              <li><a href="https://github.com/Gustavobest" target="_blank" rel="noopener noreferrer">github.com/Gustavobest</a></li>
+              <li><a href="https://www.linkedin.com/in/gustavodiegoq" target="_blank" rel="noopener noreferrer">linkedin.com/in/gustavodiegoq</a></li>
+            </ul>
+          </div>
 
-       <section id="contacto" class="card">
-    
-    <h2>Contacto</h2>
+          <!-- Formulario: se envía con Formspree (sin servidor propio) -->
+          <form class="form" action="https://formspree.io/f/mkoljvbl" method="POST" novalidate data-contact-form>
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required maxlength="80">
+            </div>
+            <div class="field">
+              <label for="email">Correo</label>
+              <input id="email" name="email" type="email" autocomplete="email" required maxlength="120">
+            </div>
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" maxlength="2000"></textarea>
+            </div>
+            <!-- Campo trampa contra spam: las personas no lo ven -->
+            <div class="hp" aria-hidden="true">
+              <label for="_gotcha">No completar</label>
+              <input id="_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">Enviar mensaje</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- REEMPLAZA EL ENLACE DE ABAJO POR EL TUYO DE FORMSPREE -->
-    <form class="contact-form" action="https://formspree.io/f/xrewpadn" method="POST">
+  <!-- ===================== PIE ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="signature" aria-hidden="true">Gustavo Quiroz</p>
+      <div class="footer__row">
+        <p>© <span data-year>2026</span> Gustavo Quiroz · Diseñado y desarrollado por mí</p>
+      </div>
+    </div>
+  </footer>
 
-        <!-- Es obligatorio incluir el atributo name="..." en cada campo -->
-        <input
-            type="text"
-            name="nombre"
-            placeholder="Tu nombre"
-            required>
-
-        <input
-            type="email"
-            name="email"
-            placeholder="Tu correo"
-            required>
-
-        <textarea
-            name="mensaje"
-            rows="5"
-            placeholder="Escribe tu mensaje..."
-            required></textarea>
-
-        <button type="submit">
-            Enviar mensaje
-        </button>
-
-        <!-- Mensaje oculto -->
-        <p id="status" class="status-message"></p>
-
-    </form>
-
-</section>
-    </main>
-
-
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-
+  <a class="to-top icon-btn" href="#inicio" aria-label="Volver arriba" data-to-top>
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
 </body>
-
 </html>
